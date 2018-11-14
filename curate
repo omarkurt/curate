@@ -23,7 +23,7 @@ jq -r .undetected_urls[] |
 grep -Eo "(http|https)://*$1[\da-z./?A-Z0-9\D=_-]*" > curate.txt
 
 # Common Crawl
-curl -s "http://index.commoncrawl.org/CC-MAIN-2018-22-index?url=*.$1&output=json" | 
+curl -s "http://index.commoncrawl.org/CC-MAIN-2018-43-index?url=*.$1&output=json" | 
 jq -r .url >> curate.txt
 
 # Wayback Machine
